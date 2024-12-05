@@ -12,13 +12,16 @@ const uniqueID = generateUniqueIDs(); // Generate 10 unique IDs
 
 document.getElementById("generateBtn").addEventListener("click", function () {
   // Get input values
-  const customerName = document.getElementById("customerName").value;
+  const customerName = document.getElementById("customerName").value.toUpperCase();
   const paymentAmount = document.getElementById("paymentAmount").value;
   const paymentDate = document.getElementById("paymentDate").value;
 
+const receiverName = document.getElementById("receiverName").value.toUpperCase();
+
+const mode = document.getElementById("mode").value.toUpperCase();
 
   // Validate inputs
-  if (!customerName || !paymentAmount || !paymentDate) {
+  if (!customerName || !paymentAmount || !paymentDate || !receiverName || !mode ) {
     alert("Please fill out all fields.");
     return;
   }
@@ -27,7 +30,9 @@ document.getElementById("generateBtn").addEventListener("click", function () {
   document.getElementById("displayCustomerName").textContent = customerName;
   document.getElementById("displayPaymentAmount").textContent = paymentAmount;
   document.getElementById("displayPaymentDate").textContent = paymentDate;
-
+  
+  document.getElementById("displayPaymentMode").textContent = mode;
+document.getElementById("displayReceiverName").textContent = receiverName;
   // Display logo
   
 
