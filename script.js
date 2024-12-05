@@ -77,12 +77,12 @@ document.getElementById("downloadBtnPdf").addEventListener("click", function () 
   }
 
   html2canvas(receipt, { scale: 2 }).then((canvas) => {
-    const imgData = canvas.toDataURL("image/png");
+    const imgData = canvas.toDataURL("image/jpg");
     const { jsPDF } = window.jspdf;
     const pdf = new jsPDF();
 
     // Add image to PDF (full page size)
-    pdf.addImage(imgData, 'PNG', 10, 10, 190, 0); // Adjust dimensions as needed
+    pdf.addImage(imgData, 'jpg',10,10,190,280); // Adjust dimensions as needed
     pdf.save(`payment_receipt${uniqueID}.pdf`); // Save as PDF
   }).catch((error) => {
     console.error("Error generating PDF:", error);
