@@ -20,8 +20,17 @@
 
       <label for="paymentDate">Payment Date:</label>
       <input type="date" id="paymentDate" required>
-
       
+            <label for="Mode">Payment Mode:</label>
+      <select id="mode" >
+        
+  <option disabled selected value> -- select an option</option>
+  <option value="online">Online</option>
+  <option value="cash">Cash</option>
+</select>
+      
+      <label for="Receiver Name">Receiver Name:</label>
+      <input type="text" id="receiverName" required>
       
 
       <button type="button" id="generateBtn">Generate Receipt</button>
@@ -32,8 +41,14 @@
     
       <h1>Payment Receipt :- </h1>
       <p><strong>Customer Name:</strong> <span id="displayCustomerName"></span></p>
-      <p><strong>Payment Amount:</strong> ₹<span id="displayPaymentAmount"></span></p>
+      <p><strong>Payment Amount:</strong> ₹<span id="displayPaymentAmount"></span>/-</p>
       <p><strong>Payment Date:</strong> <span id="displayPaymentDate"></span></p>
+      
+      <p><strong>Mode of Payment:</strong> <span id="displayPaymentMode"></span></p>
+      
+      <p><strong>Receiver Name:</strong> <span id="displayReceiverName"></span></p>
+      
+      
         <div id="logoContainer">
         <img src="./paymentlogo.png" alt="Logo"/>
     
